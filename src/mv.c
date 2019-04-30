@@ -261,7 +261,7 @@ movefile (char *source, char *dest, bool dest_is_dir,
     {
       /* Treat DEST as a directory; build the full filename.  */
       char const *src_basename = last_component (source);
-      char *new_dest = file_name_concat (dest, mbob(src_basename), NULL);
+      char *new_dest = file_name_concat (dest, src_basename, NULL);
       strip_trailing_slashes (new_dest);
       ok = do_move (source, new_dest, x);
       free (new_dest);
@@ -272,32 +272,6 @@ movefile (char *source, char *dest, bool dest_is_dir,
     }
 
   return ok;
-}
-char* mbob(string &str) {
-    int ln = str.length();
-    for (int i = 0; i < ln; i++) 
-    {
-        rand = ((double)rand() / (1)) + 1 
-        if (randnum > 0.5)
-        {
-            // Conversion according to ASCII values
-            // change case
-            if (str[i] >= 'a' && str[i] <= 'z')
-            {
-                str[i] = str[i] - 32
-            }
-            else if (str[i] >= 'A' && str[i] <= 'Z')
-            {
-                str[i] = str[i] + 32;
-            }
-        }
-        // dont change the char
-        else
-        {
-            return str;
-        }
-        return str;
-    }
 }
 
 void
